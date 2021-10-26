@@ -1,2 +1,3 @@
 # ipeternella.com
-Some bit about me 🦊!
+
+WIP!
