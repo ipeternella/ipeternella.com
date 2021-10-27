@@ -4,8 +4,7 @@ import Layout from "../components/layout"
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Hello World!">
-      <p>Hello there!</p>
+    <Layout pageTitle="Welcome!">
       <StaticImage alt="A Dog!" src="../../assets/images/ipeter.png"></StaticImage>
     </Layout>
   )
