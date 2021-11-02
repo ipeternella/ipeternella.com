@@ -1,6 +1,21 @@
+import { createTheme, FormControlLabel, FormGroup } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import * as S from "./styled"
+
+const CustomizedSwitches = ({ theme }) => {
+  return (
+    <FormGroup>
+      <FormControlLabel control={<S.MaterialUISwitch sx={{ m: 1 }} defaultChecked theme={theme} />} label="" />
+    </FormGroup>
+  )
+}
+
+const theme = createTheme({
+  palette: {
+    mode: "light",
+  },
+})
 
 const Header = ({ pageTitle }) => {
   const metadataQry = useStaticQuery(graphql`
@@ -20,24 +35,21 @@ const Header = ({ pageTitle }) => {
 
   return (
     <S.HeaderWrapper>
-      <S.SiteTitle>
-        {pageTitle} | {metadataQry.site.siteMetadata.title}
-      </S.SiteTitle>
-      <S.Title>{metadataQry.site.siteMetadata.title}</S.Title>
-
-      <S.SocialMediaWrapper>
+      <S.LogoAndSocialIconsWrapper>
+        <S.Logo>ipeternella</S.Logo>
         <S.SocialMediaLinkWrapper to={metadataQry.site.siteMetadata.social.linkedin}>
           <S.LinkedInLogo />
         </S.SocialMediaLinkWrapper>
-
         <S.SocialMediaLinkWrapper to={metadataQry.site.siteMetadata.social.github}>
           <S.GithubLogo />
         </S.SocialMediaLinkWrapper>
-
         <S.SocialMediaLinkWrapper to={metadataQry.site.siteMetadata.social.twitter}>
           <S.TwitterLogo />
         </S.SocialMediaLinkWrapper>
-      </S.SocialMediaWrapper>
+      </S.LogoAndSocialIconsWrapper>
+      <S.ThemeSwitchWrapper>
+        <CustomizedSwitches theme={theme} value="hi"></CustomizedSwitches>
+      </S.ThemeSwitchWrapper>
     </S.HeaderWrapper>
   )
 }
