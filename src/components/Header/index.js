@@ -1,4 +1,4 @@
-import { createTheme, FormControlLabel, FormGroup } from "@material-ui/core"
+import { FormControlLabel, FormGroup } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import * as S from "./styled"
@@ -10,12 +10,6 @@ const CustomizedSwitches = ({ theme }) => {
     </FormGroup>
   )
 }
-
-const theme = createTheme({
-  palette: {
-    mode: "light",
-  },
-})
 
 const Header = ({ pageTitle }) => {
   const metadataQry = useStaticQuery(graphql`
@@ -36,7 +30,7 @@ const Header = ({ pageTitle }) => {
   return (
     <S.HeaderWrapper>
       <S.LogoAndSocialIconsWrapper>
-        <S.Logo>ipeternella</S.Logo>
+        <S.Logo theme={theme}>ipeternella</S.Logo>
         <S.SocialMediaLinkWrapper to={metadataQry.site.siteMetadata.social.linkedin}>
           <S.LinkedInLogo />
         </S.SocialMediaLinkWrapper>
