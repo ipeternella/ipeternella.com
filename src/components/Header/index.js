@@ -1,12 +1,21 @@
 import { FormControlLabel, FormGroup } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
+import React, { useContext } from "react"
+import { ColorThemeContext } from "../../contexts"
 import * as S from "./styled"
 
-const CustomizedSwitches = ({ theme }) => {
+const CustomizedSwitches = () => {
+  const { theme, toggleColorMode } = useContext(ColorThemeContext)
+
   return (
     <FormGroup>
-      <FormControlLabel control={<S.MaterialUISwitch sx={{ m: 1 }} defaultChecked theme={theme} />} label="" />
+      <FormControlLabel
+        onChange={() => {
+          toggleColorMode.toggleColorMode()
+        }}
+        control={<S.MaterialUISwitch sx={{ m: 1 }} defaultChecked theme={theme} />}
+        label=""
+      />
     </FormGroup>
   )
 }
@@ -30,7 +39,7 @@ const Header = ({ pageTitle }) => {
   return (
     <S.HeaderWrapper>
       <S.LogoAndSocialIconsWrapper>
-        <S.Logo theme={theme}>ipeternella</S.Logo>
+        <S.Logo>ipeternella</S.Logo>
         <S.SocialMediaLinkWrapper to={metadataQry.site.siteMetadata.social.linkedin}>
           <S.LinkedInLogo />
         </S.SocialMediaLinkWrapper>
@@ -42,7 +51,7 @@ const Header = ({ pageTitle }) => {
         </S.SocialMediaLinkWrapper>
       </S.LogoAndSocialIconsWrapper>
       <S.ThemeSwitchWrapper>
-        <CustomizedSwitches theme={theme} value="hi"></CustomizedSwitches>
+        <CustomizedSwitches></CustomizedSwitches>
       </S.ThemeSwitchWrapper>
     </S.HeaderWrapper>
   )

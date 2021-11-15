@@ -1,19 +1,22 @@
 import { Container } from "@material-ui/core"
 import React from "react"
-import { ColorThemeContext } from "../../contexts"
+import { GlobalStyle } from "../../styles/global"
 import Header from "../Header"
 import NavBar from "../NavBar"
+import * as S from "./styled"
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <ColorThemeContext.Consumer>
-      {context => (
-        <Container>
-          <Header pageTitle={pageTitle} theme={context.theme} />
-          <NavBar></NavBar>
-        </Container>
-      )}
-    </ColorThemeContext.Consumer>
+    <>
+      <title>{pageTitle}</title>
+      <GlobalStyle />
+
+      <Container>
+        <Header />
+        <NavBar />
+        <S.Main />
+      </Container>
+    </>
   )
 }
 

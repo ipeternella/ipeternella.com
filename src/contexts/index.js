@@ -1,15 +1,15 @@
 import { createTheme } from "@material-ui/core"
 import React from "react"
+import { ThemeProvider } from "styled-components"
 import buildThemeConfig from "../themes"
 
 export const ColorThemeContext = React.createContext()
 
 const ColorThemeProvider = ({ children }) => {
-  // const [isDark, setTheme] = useState(false)
   const [mode, setMode] = React.useState("light")
+  const theme = React.useMemo(() => createTheme(buildThemeConfig(mode)), [mode])
   const colorModeConfig = React.useMemo(
     () => ({
-      // The dark mode switch would invoke this method
       toggleColorMode: () => {
         setMode(prevMode => (prevMode === "light" ? "dark" : "light"))
       },
@@ -17,13 +17,9 @@ const ColorThemeProvider = ({ children }) => {
     []
   )
 
-  // Update the theme only if the mode changes
-  const theme = React.useMemo(() => createTheme(buildThemeConfig(mode)), [mode])
-
-  // pass memoized theme
   return (
-    <ColorThemeContext.Provider value={{ theme: theme, colorModeConfig: colorModeConfig }}>
-      {children}
+    <ColorThemeContext.Provider value={{ theme: theme, toggleColorMode: colorModeConfig }}>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </ColorThemeContext.Provider>
   )
 }

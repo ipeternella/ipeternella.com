@@ -8,8 +8,8 @@ export const NavBarWrapper = styled(Container).attrs({
   display: flex;
   margin-top: 20px;
   justify-content: space-around;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-top: 2px solid ${props => props.theme.palette.text.primary};
+  border-bottom: 2px solid ${props => props.theme.palette.text.primary};
   width: 100%;
 `
 
@@ -39,8 +39,6 @@ export const NullImg = styled.div`
 export const NavSelector = styled(Box)`
   display: flex;
   justify-content: space-around;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
   width: 100%;
 `
 
@@ -59,5 +57,6 @@ export const NavOption = styled(Typography).attrs({
   && {
     font-family: "Fjalla One";
     padding: 5px;
+    color: ${props => props.theme.palette.text.primary};
   }
 `

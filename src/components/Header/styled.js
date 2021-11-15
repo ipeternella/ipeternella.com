@@ -40,18 +40,19 @@ export const SocialMediaWrapper = styled(Box)`
 export const SocialMediaLinkWrapper = styled(Link)`
   &:visited {
     text-decoration: none;
-    color: transparent;
+    color: ${props => props.theme.palette.text.primary};
   }
 `
 
-export const Logo = styled(Typography).attrs({
+export const Logo = styled(Typography).attrs(props => ({
   variant: "h2",
   align: "center",
-})`
+}))`
   && {
     width: 100%;
     font-family: "Fjalla One";
     padding: 10px;
+    color: ${props => props.theme.palette.text.primary};
   }
 `
 

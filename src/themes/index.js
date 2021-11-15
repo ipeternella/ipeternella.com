@@ -14,8 +14,8 @@ const getPaletteFromMode = mode => {
     primary: deepOrange,
     divider: deepOrange[700],
     background: {
-      default: deepOrange[900],
-      paper: deepOrange[900],
+      default: grey[900],
+      paper: grey[900],
     },
     text: {
       primary: "#fff",
@@ -36,6 +36,15 @@ const buildThemeConfig = mode => {
     },
     typography: {
       fontFamily: ["Fjalla One", "Roboto", "Arial"].join(","),
+    },
+    components: {
+      MuiContainer: {
+        styleOverrides: {
+          root: {
+            background: "black",
+          },
+        },
+      },
     },
   }
 }
