@@ -14,7 +14,7 @@ const Layout = ({ pageTitle, children }) => {
       <Container>
         <Header />
         <NavBar />
-        <S.Main />
+        <S.Main>{children}</S.Main>
       </Container>
     </>
   )

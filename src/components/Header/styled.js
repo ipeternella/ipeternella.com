@@ -1,8 +1,7 @@
 import "@fontsource/fjalla-one"
 import "@fontsource/press-start-2p"
-import { Box, Container, Switch, Typography } from "@material-ui/core"
+import { Box, Container, Link, Switch, Typography } from "@material-ui/core"
 import { Github, LinkedinSquare, Twitter } from "@styled-icons/boxicons-logos"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 export const SiteTitle = styled.title``
@@ -37,7 +36,9 @@ export const SocialMediaWrapper = styled(Box)`
   justify-content: center;
 `
 
-export const SocialMediaLinkWrapper = styled(Link)`
+export const SocialMediaLinkWrapper = styled(Link).attrs(props => ({
+  color: "textPrimary",
+}))`
   &:visited {
     text-decoration: none;
     color: ${props => props.theme.palette.text.primary};

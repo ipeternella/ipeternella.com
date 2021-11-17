@@ -40,13 +40,13 @@ const Header = ({ pageTitle }) => {
     <S.HeaderWrapper>
       <S.LogoAndSocialIconsWrapper>
         <S.Logo>ipeternella</S.Logo>
-        <S.SocialMediaLinkWrapper to={metadataQry.site.siteMetadata.social.linkedin}>
+        <S.SocialMediaLinkWrapper href={metadataQry.site.siteMetadata.social.linkedin}>
           <S.LinkedInLogo />
         </S.SocialMediaLinkWrapper>
-        <S.SocialMediaLinkWrapper to={metadataQry.site.siteMetadata.social.github}>
+        <S.SocialMediaLinkWrapper href={metadataQry.site.siteMetadata.social.github}>
           <S.GithubLogo />
         </S.SocialMediaLinkWrapper>
-        <S.SocialMediaLinkWrapper to={metadataQry.site.siteMetadata.social.twitter}>
+        <S.SocialMediaLinkWrapper href={metadataQry.site.siteMetadata.social.twitter}>
           <S.TwitterLogo />
         </S.SocialMediaLinkWrapper>
       </S.LogoAndSocialIconsWrapper>

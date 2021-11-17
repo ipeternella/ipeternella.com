@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import * as S from "./styled"
 
@@ -7,7 +8,9 @@ const NavBarOption = props => {
       {props.isSelected ? (
         <S.NavOptionWrapper onMouseOver={() => props.onMouseOver()}>
           <S.FoxFaceImg></S.FoxFaceImg>
-          <S.NavOption>{props.name}</S.NavOption>
+          <Link to={props.to}>
+            <S.NavOption>{props.name}</S.NavOption>
+          </Link>
         </S.NavOptionWrapper>
       ) : (
         <S.NavOptionWrapper onMouseOver={() => props.onMouseOver()}>
@@ -40,16 +43,19 @@ class NavBar extends React.Component {
       <S.NavBarWrapper>
         <NavBarOption
           name="Home"
+          to="/"
           onMouseOver={() => this.handleMouseHover(0)}
           isSelected={this.state.options[0]}
         ></NavBarOption>
         <NavBarOption
           name="About me"
+          to="/about"
           onMouseOver={() => this.handleMouseHover(1)}
           isSelected={this.state.options[1]}
         ></NavBarOption>
         <NavBarOption
           name="Play"
+          to="/game"
           onMouseOver={() => this.handleMouseHover(2)}
           isSelected={this.state.options[2]}
         ></NavBarOption>
