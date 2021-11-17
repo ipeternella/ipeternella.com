@@ -19,13 +19,14 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: `blog`,
-        path: `${__dirname}/content/blog`,
+        name: `pages`,
+        path: `${__dirname}/content/pages`,
       },
     },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-remark",
   ],
 }
