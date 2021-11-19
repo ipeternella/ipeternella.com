@@ -4,6 +4,41 @@ import styled from "styled-components"
 export const ContentWrapper = styled(Box).attrs({
   component: "section",
 })`
+  /* fonts */
+  --font-body: ${props => props.theme.typography.secondary.fontFamily};
+  --font-heading: ${props => props.theme.typography.primary.fontFamily};
+
+  /* font sizes */
+  --fontSize-root: 16px;
+  --fontSize-1: 1rem;
+  --fontSize-2: 1.2rem;
+  --fontSize-3: 1.44rem;
+  --fontSize-4: 1.728rem;
+  --fontSize-5: 2.5rem;
+  --fontSize-6: 3.5rem;
+
+  /* font colors */
+  --color-primary: ${props => props.theme.palette.primary.light};
+  --color-text: ${props => props.theme.palette.text.primary};
+  --color-text-light: ${props => props.theme.palette.text.primary};
+  --color-heading: ${props => props.theme.palette.foxColors.hood};
+  --color-accent: ${props => props.theme.palette.divider};
+
+  /* font weights */
+  --fontWeight-normal: 400;
+  --fontWeight-medium: 500;
+  --fontWeight-semibold: 600;
+  --fontWeight-bold: 700;
+  --fontWeight-extrabold: 800;
+  --fontWeight-black: 900;
+
+  /* line heights */
+  --lineHeight-none: 1;
+  --lineHeight-tight: 1.1;
+  --lineHeight-normal: 1.5;
+  --lineHeight-relaxed: 1.625;
+
+  /* widths */
   --maxWidth-none: "none";
   --maxWidth-xs: 20rem;
   --maxWidth-sm: 24rem;
@@ -15,6 +50,8 @@ export const ContentWrapper = styled(Box).attrs({
   --maxWidth-4xl: 56rem;
   --maxWidth-full: "100%";
   --maxWidth-wrapper: var(--maxWidth-2xl);
+
+  /* spacings */
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -30,31 +67,8 @@ export const ContentWrapper = styled(Box).attrs({
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --font-body: ${props => props.theme.typography.primary.fontFamily};
-  --font-heading: ${props => props.theme.typography.primary.fontFamily};
-  --fontWeight-normal: 400;
-  --fontWeight-medium: 500;
-  --fontWeight-semibold: 600;
-  --fontWeight-bold: 700;
-  --fontWeight-extrabold: 800;
-  --fontWeight-black: 900;
-  --fontSize-root: 16px;
-  --lineHeight-none: 1;
-  --lineHeight-tight: 1.1;
-  --lineHeight-normal: 1.5;
-  --lineHeight-relaxed: 1.625;
-  // 1.200 Minor Third Type Scale
-  --fontSize-1: 1rem;
-  --fontSize-2: 1.2rem;
-  --fontSize-3: 1.44rem;
-  --fontSize-4: 1.728rem;
-  --fontSize-5: 2.5rem;
-  --fontSize-6: 3.5rem;
-  --color-primary: ${props => props.theme.palette.primary.light};
-  --color-text: ${props => props.theme.palette.text.primary};
-  --color-text-light: ${props => props.theme.palette.text.primary};
-  --color-heading: ${props => props.theme.palette.primary};
-  --color-accent: ${props => props.theme.palette.divider};
+
+  /* css */
   *,
   :after,
   :before {
@@ -81,7 +95,7 @@ export const ContentWrapper = styled(Box).attrs({
   h5,
   h6 {
     font-family: var(--font-heading);
-    margin-top: var(--spacing-12);
+    margin-top: var(--spacing-10);
     margin-bottom: var(--spacing-6);
     line-height: var(--lineHeight-tight);
     letter-spacing: -0.025em;
@@ -95,6 +109,7 @@ export const ContentWrapper = styled(Box).attrs({
     color: var(--color-heading);
   }
   h1 {
+    margin-top: var(--spacing-12);
     font-weight: var(--fontWeight-black);
     font-size: var(--fontSize-6);
     color: var(--color-heading);
@@ -135,6 +150,7 @@ export const ContentWrapper = styled(Box).attrs({
     --x-height-multiplier: 0.35;
     margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
     padding: var(--spacing-0);
+    font-size: var(--fontSize-2);
   }
   p:last-child {
     margin-bottom: ${props => props.theme.spacing(3)}px;

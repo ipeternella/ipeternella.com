@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fontsource/fjalla-one": "^4.5.0",
-    "@fontsource/press-start-2p": "^4.5.0",
+    "@fontsource/ubuntu": "^4.5.0",
     "@material-ui/core": "^4.12.3",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",

@@ -1,3 +1,5 @@
+import "@fontsource/fjalla-one"
+import "@fontsource/ubuntu"
 import React from "react"
 import ColorThemeProvider from "./src/contexts"
 

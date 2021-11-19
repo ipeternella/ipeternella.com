@@ -4,6 +4,9 @@ const getPaletteFromMode = mode => {
   let lightMode = {
     primary: amber,
     divider: amber[200],
+    background: {
+      default: grey[300],
+    },
     text: {
       primary: grey[900],
       secondary: grey[800],
@@ -32,23 +35,19 @@ const buildThemeConfig = mode => {
   return {
     palette: {
       mode,
+      foxColors: {
+        facePrimary: "#f09d48",
+        faceSecondary: "#ffcc98",
+        hood: "#5b6de1",
+      },
       ...modePalette,
     },
     typography: {
       primary: {
-        fontFamily: ["Fjalla One", "Roboto", "Arial"].join(","),
+        fontFamily: ["Fjalla One", "Arial"].join(","),
       },
       secondary: {
-        fontFamily: ["Roboto", "Arial"].join(","),
-      },
-    },
-    components: {
-      MuiContainer: {
-        styleOverrides: {
-          root: {
-            background: "black",
-          },
-        },
+        fontFamily: ["Ubuntu", "Arial"].join(","),
       },
     },
   }

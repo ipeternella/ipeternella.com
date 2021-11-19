@@ -1,5 +1,3 @@
-import "@fontsource/fjalla-one"
-import "@fontsource/press-start-2p"
 import { Box, Container, Link, Switch, Typography } from "@material-ui/core"
 import { Github, LinkedinSquare, Twitter } from "@styled-icons/boxicons-logos"
 import styled from "styled-components"
