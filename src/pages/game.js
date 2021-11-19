@@ -1,14 +1,11 @@
 import React from "react"
+import Game from "../components/Game"
 import Layout from "../components/Layout"
 
 const GamePage = ({ data }) => {
-  const title = "WIP!"
-
   return (
     <Layout>
-      {/* <Section>
-        <p>{title}</p>
-      </Section> */}
+      <Game />
     </Layout>
   )
 }

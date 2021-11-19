@@ -7,7 +7,7 @@ export const FooterWrapper = styled(Box)`
   justify-content: center;
 `
 export const FooterLogo = styled(Typography).attrs(props => ({
-  variant: "p",
+  variant: "body1",
   align: "center",
 }))`
   && {
