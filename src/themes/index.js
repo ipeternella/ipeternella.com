@@ -35,7 +35,12 @@ const buildThemeConfig = mode => {
       ...modePalette,
     },
     typography: {
-      fontFamily: ["Fjalla One", "Roboto", "Arial"].join(","),
+      primary: {
+        fontFamily: ["Fjalla One", "Roboto", "Arial"].join(","),
+      },
+      secondary: {
+        fontFamily: ["Roboto", "Arial"].join(","),
+      },
     },
     components: {
       MuiContainer: {

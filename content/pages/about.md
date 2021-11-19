@@ -1,7 +1,8 @@
 ---
-title: "About me"
+title: "About"
+filename: "about.md"
 ---
 
-# Hello World!
+# About
 
-Hello, world!
+About this page!

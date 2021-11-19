@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 import React from "react"
+import Content from "../components/Content"
 import Layout from "../components/Layout"
-import Section from "../components/Section"
 
 const AboutPage = ({ data }) => {
   const {
@@ -13,17 +13,14 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <Section>
-        <p>{title}</p>
-        <p dangerouslySetInnerHTML={{ __html: content }} />
-      </Section>
+      <Content content={html} />
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
-  query ($id: String) {
-    markdownRemark(id: { eq: $id }) {
+  query ($frontMatterAboutPageTitle: String) {
+    markdownRemark(frontmatter: { title: { eq: $frontMatterAboutPageTitle } }) {
       html
       frontmatter {
         title
