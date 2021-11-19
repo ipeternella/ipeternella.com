@@ -111,7 +111,7 @@ export const ContentWrapper = styled(Box).attrs({
   h1 {
     margin-top: var(--spacing-12);
     font-weight: var(--fontWeight-black);
-    font-size: var(--fontSize-6);
+    font-size: var(--fontSize-5);
     color: var(--color-heading);
   }
   h2 {
@@ -162,11 +162,12 @@ export const ContentWrapper = styled(Box).attrs({
     margin-bottom: var(--spacing-8);
     list-style-position: outside;
     list-style-image: none;
+    list-style-type: disc;
   }
   ul li,
   ol li {
     padding-left: var(--spacing-0);
-    margin-bottom: calc(var(--spacing-8) / 2);
+    margin-bottom: calc(var(--spacing-2) / 2);
   }
   li > p {
     margin-bottom: calc(var(--spacing-8) / 2);

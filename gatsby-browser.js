@@ -1,5 +1,5 @@
 import "@fontsource/fjalla-one"
-import "@fontsource/ubuntu"
+import "@fontsource/roboto"
 import React from "react"
 import ColorThemeProvider from "./src/contexts"
 

@@ -8,8 +8,8 @@ export const NavBarWrapper = styled(Container).attrs({
   display: flex;
   margin-top: 20px;
   justify-content: space-around;
-  border-top: 2px solid ${props => props.theme.palette.text.primary};
-  border-bottom: 2px solid ${props => props.theme.palette.text.primary};
+  border-top: 1px solid ${props => props.theme.palette.foxColors.hood};
+  border-bottom: 1px solid ${props => props.theme.palette.foxColors.hood};
   width: 100%;
 `
 

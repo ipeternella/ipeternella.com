@@ -2,7 +2,7 @@ import { Box, Container, Link, Switch, Typography } from "@material-ui/core"
 import { Github, LinkedinSquare, Twitter } from "@styled-icons/boxicons-logos"
 import styled from "styled-components"
 
-export const SiteTitle = styled.title``
+const logoIconsHeight = "40px"
 
 export const HeaderContainer = styled(Container)`
   display: flex;
@@ -51,24 +51,24 @@ export const Logo = styled(Typography).attrs(props => ({
     width: 100%;
     font-family: "Fjalla One";
     padding: 10px;
-    color: #f09d48;
+    color: ${props => props.theme.palette.foxColors.facePrimary};
   }
 `
 
 export const LinkedInLogo = styled(LinkedinSquare)`
-  height: 50px;
+  height: ${logoIconsHeight};
   width: 3rem;
   margin: 0;
 `
 
 export const GithubLogo = styled(Github)`
-  height: 50px;
+  height: ${logoIconsHeight};
   width: 3rem;
   margin: 0;
 `
 
 export const TwitterLogo = styled(Twitter)`
-  height: 50px;
+  height: ${logoIconsHeight};
   width: 3rem;
   margin: 0;
 `

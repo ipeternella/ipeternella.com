@@ -47,7 +47,7 @@ const buildThemeConfig = mode => {
         fontFamily: ["Fjalla One", "Arial"].join(","),
       },
       secondary: {
-        fontFamily: ["Ubuntu", "Arial"].join(","),
+        fontFamily: ["Roboto", "Arial"].join(","),
       },
     },
   }
