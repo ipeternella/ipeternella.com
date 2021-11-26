@@ -1,11 +1,8 @@
-/**
- * @jest-environment jsdom
- */
-
-import { render } from "@testing-library/react"
+import { screen } from "@testing-library/dom"
 import * as Gatsby from "gatsby"
 import React from "react"
 import Header from "../../../../src/components/Header"
+import { render } from "../../../support/render"
 
 describe("Header component", () => {
   let fakeSiteMetadata
@@ -35,9 +32,10 @@ describe("Header component", () => {
   it("should have 'ipeternella' logo in it", async () => {
     // arrange and act (render)
     render(<Header pageTitle="ipeternella" />)
-    const element = await screen.getByLabelText("ipeternella")
+    const element = await screen.getByText("ipeternella")
 
     // assert
     expect(element.textContent).toBe("ipeternella")
+    expect(element.localName).toBe("h2")
   })
 })
