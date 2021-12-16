@@ -4,7 +4,7 @@ title: "About"
 
 # About me
 
-My career in software development started after I finished my undergraduate thesis at UNICAMP which was a project that included software engineering, chemical engineering and artificial intelligence. The software that I developed for that project made me decide that I needed a career change as I was amazed by the wonderful things that can be achieved in the computing world! Many years have passed since that fortunate decision and I've been working as a software developer for more than 5 years now.
+My career in software development started after I finished my undergraduate thesis at UNICAMP which was a project that included software engineering, chemical engineering and artificial intelligence. The software that I developed for that project made me decide that I needed a career change as I was amazed by the wonderful things that can be achieved in the computing world! Many years have passed since that fortunate decision and now I've been working as a software developer for more than 5 years.
 
 ### Curious Person
 
