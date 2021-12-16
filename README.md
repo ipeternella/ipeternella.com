@@ -6,15 +6,15 @@ A Gatsby and Phaser project design to anyone who would like to know a few bits a
 
 🚧 🏗️ This project is a WIP and as such many features of it are still missing and/or are experimental or may not yet be working properly. 🏗️ 🚧
 
-## Objective
+## 🔎 Objective
 
 This project will (eventually) replace my [current website](https://ipeternella.com) with more modern front-end technologies and hopefully with an acceptable experience to anyone who'd like to know a little bit more about me. Some features are still to be defined.
 
-## Graphics: disclaimer
+## 📝 Graphics: disclaimer
 
 All the sprites/graphics of the game have been created by me and no other artists' work have been used.
 
-## Technologies (so far)
+## 💻 Technologies (so far)
 
 - React/Gatsby
 - Phaser
@@ -24,7 +24,7 @@ All the sprites/graphics of the game have been created by me and no other artist
 - Asesprite (sprites drawing)
 - Tiled (map building)
 
-## Tests
+## 🧪 Tests
 
 To run the test suite:
 
@@ -32,7 +32,7 @@ To run the test suite:
 npm run test
 ```
 
-## Special Thanks
+## 🙏 Special Thanks
 
 I thank a lot the following project owners as these projects have been a very important reference to this project:
 
