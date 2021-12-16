@@ -4,11 +4,11 @@ A Gatsby and Phaser project design to anyone who would like to know a few bits a
 
 ![website demonstration](docs/ipeternella.com.gif)
 
-🚧 🏗️ This project is a WIP and as such many features of it are still missing and/or are experimental. 🏗️ 🚧
+🚧 🏗️ This project is a WIP and as such many features of it are still missing and/or are experimental or may not yet be working properly. 🏗️ 🚧
 
 ## Objective
 
-This project will (eventually) replace my [current website](https://ipeternella.com) with more modern front-end technologies and hopefully an acceptable experience to anyone who'd like to know a little bit more about me. Some features are still to be defined.
+This project will (eventually) replace my [current website](https://ipeternella.com) with more modern front-end technologies and hopefully with an acceptable experience to anyone who'd like to know a little bit more about me. Some features are still to be defined.
 
 ## Graphics: disclaimer
 
