@@ -17,7 +17,7 @@ In this section you can find a few bits and bytes about me such as who am I, som
 
 ### Play 🦊
 
-No time for reading? Not a problem! How about playing a quick top-down rpg-like game with my fox to get to know me a little better?
+No time for reading? Not a problem! How about playing a quick top-down rpg-like game with Peter the fox to get to know me a little better?
 
 ### Thanks 🙏
 
