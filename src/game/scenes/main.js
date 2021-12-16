@@ -1,29 +1,30 @@
 import Phaser from "phaser"
-import Fox from "../fox"
+import PeterFox from "../fox"
 
 class MainScene extends Phaser.Scene {
   constructor() {
     super("MainScene")
-    this.fox = null
+    this.peterFox = null
   }
 
   preload() {
-    this.load.image("fox", "/spritesheets/fox-front.png")
     this.load.image("bedroomImg", "/spritesheets/bedroom.png")
     this.load.tilemapTiledJSON("map", "/spritesheets/bedroom.json")
+    this.load.aseprite("peterFoxAnim", "/spritesheets/peter.png", "/spritesheets/peter.json")
   }
 
   create() {
     this.map = this.make.tilemap({ key: "map" })
     this.tileset = this.map.addTilesetImage("bedroom", "bedroomImg")
-    this.floor = this.map.createStaticLayer("floor", this.tileset, 0, 0).setScale(10)
-    this.items = this.map.createStaticLayer("items", this.tileset, 0, 0).setScale(10)
-    this.fox = new Fox(this, 400, 300, "fox")
+    this.floor = this.map.createLayer("floor", this.tileset, 0, 0).setScale(10)
+    this.items = this.map.createLayer("items", this.tileset, 0, 0).setScale(10)
+    this.anims.createFromAseprite("peterFoxAnim")
+    this.peterFox = new PeterFox(this, 400, 300, "peterFox")
     this.cursors = this.input.keyboard.createCursorKeys()
   }
 
   update() {
-    this.fox.update(this.cursors)
+    this.peterFox.update(this.cursors)
   }
 }
 
