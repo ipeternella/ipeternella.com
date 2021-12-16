@@ -34,9 +34,9 @@ npm run test
 
 ## 🙏 Special Thanks
 
-I thank a lot the following project owners as these projects have been a very important reference to this project:
+Many thanks to the following projects and projects owners as these have been a very important reference to me:
 
 - [williamantunes/williamantunes.com](https://github.com/willianantunes/willianantunes.com)
 - [felipefialho/felipefialho.com](https://github.com/felipefialho/felipefialho.com)
 
-I highly recommend checking these two wonderful projects, too!
+I highly recommend checking these two wonderful front-end projects to know more!
