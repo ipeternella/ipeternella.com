@@ -3,22 +3,21 @@ import MainScene from "./scenes/main"
 
 const config = {
   type: Phaser.AUTO,
-  width: 800,
-  height: 800,
+  width: 128,
+  height: 112,
   parent: "game",
   pixelArt: true,
+  transparent: true,
   scale: {
-    parent: "game",
-    mode: Phaser.Scale.FIT,
+    mode: Phaser.Scale.HEIGHT_CONTROLS_WIDTH,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
   physics: {
     default: "arcade",
     arcade: {
-      debug: false,
+      debug: true,
     },
   },
-
   /* scenes for gameplay */
   scene: [MainScene],
 }
