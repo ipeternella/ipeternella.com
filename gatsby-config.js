@@ -16,6 +16,7 @@ module.exports = {
         path: `${__dirname}/content/pages`,
       },
     },
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-plugin-mdx",
