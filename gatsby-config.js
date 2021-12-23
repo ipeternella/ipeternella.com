@@ -6,6 +6,8 @@ module.exports = {
       github: "https://github.com/ipeternella",
       linkedin: "https://www.linkedin.com/in/igor-grillo-peternella/",
       twitter: "https://twitter.com/grillo_igor",
+      leetcode: "https://leetcode.com/ipeternella/",
+      hackerrank: "https://www.hackerrank.com/ipeternella",
     },
   },
   plugins: [

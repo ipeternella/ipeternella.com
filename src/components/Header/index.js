@@ -30,6 +30,8 @@ const Header = ({ pageTitle }) => {
             github
             linkedin
             twitter
+            leetcode
+            hackerrank
           }
         }
       }
@@ -49,10 +51,10 @@ const Header = ({ pageTitle }) => {
         <S.SocialMediaLinkWrapper href={metadataQry.site.siteMetadata.social.twitter}>
           <S.TwitterLogo />
         </S.SocialMediaLinkWrapper>
-        <S.SocialMediaLinkWrapper href={metadataQry.site.siteMetadata.social.twitter}>
+        <S.SocialMediaLinkWrapper href={metadataQry.site.siteMetadata.social.leetcode}>
           <S.LeetCodeLogo />
         </S.SocialMediaLinkWrapper>
-        <S.SocialMediaLinkWrapper href={metadataQry.site.siteMetadata.social.twitter}>
+        <S.SocialMediaLinkWrapper href={metadataQry.site.siteMetadata.social.hackerrank}>
           <S.HackerrankLogo />
         </S.SocialMediaLinkWrapper>
       </S.LogoAndSocialIconsWrapper>
