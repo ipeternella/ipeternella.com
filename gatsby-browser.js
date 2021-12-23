@@ -3,7 +3,7 @@ import "@fontsource/roboto"
 import React from "react"
 import ColorThemeProvider from "./src/contexts"
 
-// Gatsby hook, takes the whole "site" and passes it as a props
+// Gatsby hook which wraps all the pages -> no unmounting!
 export const wrapRootElement = ({ element }) => {
   return <ColorThemeProvider>{element}</ColorThemeProvider>
 }

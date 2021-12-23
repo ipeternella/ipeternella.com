@@ -6,7 +6,7 @@ import Header from "../Header"
 import NavBar from "../NavBar"
 import * as S from "./styled"
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ pageTitle, children, location }) => {
   return (
     <>
       <title>{pageTitle}</title>
@@ -14,7 +14,7 @@ const Layout = ({ pageTitle, children }) => {
 
       <Container>
         <Header />
-        <NavBar />
+        <NavBar location={location} />
         <S.Main>{children}</S.Main>
         <Footer />
       </Container>

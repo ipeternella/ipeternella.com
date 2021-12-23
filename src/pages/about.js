@@ -3,16 +3,15 @@ import React from "react"
 import Content from "../components/Content"
 import Layout from "../components/Layout"
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data, location }) => {
   const {
     markdownRemark: { frontmatter, html },
   } = data // from page query
-
   const title = frontmatter.title
   const content = html
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Content content={html} />
     </Layout>
   )
