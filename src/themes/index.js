@@ -1,6 +1,6 @@
 import { amber, deepOrange, grey } from "@material-ui/core/colors"
 
-const getPaletteFromMode = mode => {
+export const getPaletteFromMode = mode => {
   let lightMode = {
     primary: amber,
     divider: amber[200],
@@ -29,17 +29,7 @@ const getPaletteFromMode = mode => {
   return mode === "light" ? lightMode : darkMode
 }
 
-export const getThemeFromLocalStorage = localStorage => {
-  const theme = localStorage.getItem("theme")
-
-  if (theme === null) {
-    return "light"
-  }
-
-  return theme
-}
-
-const buildThemeConfig = mode => {
+export const buildThemeConfig = mode => {
   let modePalette = getPaletteFromMode(mode)
 
   return {
@@ -61,6 +51,23 @@ const buildThemeConfig = mode => {
       },
     },
   }
+}
+
+export const getThemeFromLocalStorage = localStorage => {
+  const theme = localStorage.getItem("theme")
+
+  if (theme === null) {
+    return "light"
+  }
+
+  return theme
+}
+
+export const toggleThemeFromLocalStorage = prevMode => {
+  prevMode = prevMode === "light" ? "dark" : "light"
+  localStorage.setItem("theme", prevMode)
+
+  return prevMode
 }
 
 export default buildThemeConfig

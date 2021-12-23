@@ -4,14 +4,14 @@ import React, { useContext } from "react"
 import { ColorThemeContext } from "../../contexts"
 import * as S from "./styled"
 
-const CustomizedSwitches = () => {
-  const { theme, toggleColorMode } = useContext(ColorThemeContext)
+const ThemeSwitch = () => {
+  const { theme, toggleTheme } = useContext(ColorThemeContext)
 
   return (
     <FormGroup>
       <FormControlLabel
         onChange={() => {
-          toggleColorMode.toggleColorMode()
+          toggleTheme()
         }}
         checked={theme.palette.mode === "dark" ? false : true}
         control={<S.MaterialUISwitch sx={{ m: 1 }} theme={theme} />}
@@ -51,7 +51,7 @@ const Header = ({ pageTitle }) => {
         </S.SocialMediaLinkWrapper>
       </S.LogoAndSocialIconsWrapper>
       <S.ThemeSwitchWrapper>
-        <CustomizedSwitches></CustomizedSwitches>
+        <ThemeSwitch></ThemeSwitch>
       </S.ThemeSwitchWrapper>
     </S.HeaderWrapper>
   )
