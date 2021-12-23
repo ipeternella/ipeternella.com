@@ -1,17 +1,22 @@
 import { createTheme } from "@material-ui/core"
 import React from "react"
 import { ThemeProvider } from "styled-components"
-import buildThemeConfig from "../themes"
+import buildThemeConfig, { getThemeFromLocalStorage } from "../themes"
 
 export const ColorThemeContext = React.createContext()
 
 const ColorThemeProvider = ({ children }) => {
-  const [mode, setMode] = React.useState("light")
+  const [mode, setMode] = React.useState(getThemeFromLocalStorage(localStorage))
   const theme = React.useMemo(() => createTheme(buildThemeConfig(mode)), [mode])
   const colorModeConfig = React.useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode(prevMode => (prevMode === "light" ? "dark" : "light"))
+        setMode(prevMode => {
+          prevMode = prevMode === "light" ? "dark" : "light"
+          localStorage.setItem("theme", prevMode)
+
+          return prevMode
+        })
       },
     }),
     []

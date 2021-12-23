@@ -29,6 +29,16 @@ const getPaletteFromMode = mode => {
   return mode === "light" ? lightMode : darkMode
 }
 
+export const getThemeFromLocalStorage = localStorage => {
+  const theme = localStorage.getItem("theme")
+
+  if (theme === null) {
+    return "light"
+  }
+
+  return theme
+}
+
 const buildThemeConfig = mode => {
   let modePalette = getPaletteFromMode(mode)
 

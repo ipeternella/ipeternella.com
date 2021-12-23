@@ -13,8 +13,8 @@ const CustomizedSwitches = () => {
         onChange={() => {
           toggleColorMode.toggleColorMode()
         }}
-        control={<S.MaterialUISwitch sx={{ m: 1 }} defaultChecked theme={theme} />}
-        label=""
+        checked={theme.palette.mode === "dark" ? false : true}
+        control={<S.MaterialUISwitch sx={{ m: 1 }} theme={theme} />}
       />
     </FormGroup>
   )
