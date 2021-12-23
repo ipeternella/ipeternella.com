@@ -1,8 +1,10 @@
 import { Box, Container, Link, Switch, Typography } from "@material-ui/core"
 import { Github, LinkedinSquare, Twitter } from "@styled-icons/boxicons-logos"
+import { Hackerrank } from "@styled-icons/fa-brands"
+import { Leetcode } from "@styled-icons/simple-icons/"
 import styled from "styled-components"
 
-const logoIconsHeight = "40px"
+const logoIconsHeight = 40
 
 export const HeaderContainer = styled(Container)`
   display: flex;
@@ -34,15 +36,6 @@ export const SocialMediaWrapper = styled(Box)`
   justify-content: center;
 `
 
-export const SocialMediaLinkWrapper = styled(Link).attrs(props => ({
-  color: "textPrimary",
-}))`
-  &:visited {
-    text-decoration: none;
-    color: ${props => props.theme.palette.text.primary};
-  }
-`
-
 export const Logo = styled(Typography).attrs(props => ({
   variant: "h2",
   align: "center",
@@ -55,22 +48,47 @@ export const Logo = styled(Typography).attrs(props => ({
   }
 `
 
+export const SocialMediaLinkWrapper = styled(Link).attrs(props => ({
+  color: "textPrimary",
+}))`
+  &:visited {
+    text-decoration: none;
+  }
+`
+
 export const LinkedInLogo = styled(LinkedinSquare)`
-  height: ${logoIconsHeight};
+  height: ${logoIconsHeight}px;
   width: 3rem;
   margin: 0;
+  color: ${props => props.theme.palette.text.primary};
 `
 
 export const GithubLogo = styled(Github)`
-  height: ${logoIconsHeight};
+  height: ${logoIconsHeight}px;
   width: 3rem;
   margin: 0;
+  color: ${props => props.theme.palette.text.primary};
 `
 
 export const TwitterLogo = styled(Twitter)`
-  height: ${logoIconsHeight};
+  height: ${logoIconsHeight}px;
   width: 3rem;
   margin: 0;
+  color: ${props => props.theme.palette.text.primary};
+`
+
+export const LeetCodeLogo = styled(Leetcode)`
+  height: ${logoIconsHeight - 2}px;
+  width: 3rem;
+  margin: 0;
+  color: ${props => props.theme.palette.text.primary};
+`
+
+export const HackerrankLogo = styled(Hackerrank)`
+  height: ${logoIconsHeight - 2}px;
+  width: 3rem;
+  margin: 0;
+  color: ${props => props.theme.palette.text.primary};
 `
 
 /*
