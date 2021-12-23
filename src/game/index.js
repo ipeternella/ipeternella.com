@@ -1,8 +1,11 @@
-import Phaser from "phaser"
-import config from "./config"
-
 const startGame = async window => {
-  const game = new Phaser.Game(config)
+  const Phaser = await import("phaser")
+  const { default: config } = await import("./config")
+  const { default: MainScene } = await import("./scenes/main")
+  const game = new Phaser.Game({
+    ...config,
+    scene: [MainScene],
+  })
 
   return game
 }

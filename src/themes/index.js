@@ -54,6 +54,8 @@ export const buildThemeConfig = mode => {
 }
 
 export const getThemeFromLocalStorage = localStorage => {
+  if (localStorage === null) return "light"
+
   const theme = localStorage.getItem("theme")
 
   if (theme === null) {

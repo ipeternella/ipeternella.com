@@ -6,7 +6,10 @@ import buildThemeConfig, { getThemeFromLocalStorage, toggleThemeFromLocalStorage
 export const ColorThemeContext = React.createContext()
 
 const ColorThemeProvider = ({ children }) => {
-  const [mode, setMode] = React.useState(getThemeFromLocalStorage(localStorage))
+  let storage = null
+  if (typeof window !== "undefined") storage = localStorage
+
+  const [mode, setMode] = React.useState(getThemeFromLocalStorage(storage))
   const theme = React.useMemo(() => createTheme(buildThemeConfig(mode)), [mode])
   const toggleTheme = () => setMode(prevMode => toggleThemeFromLocalStorage(prevMode))
 

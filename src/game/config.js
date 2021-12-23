@@ -1,5 +1,4 @@
 import Phaser from "phaser"
-import MainScene from "./scenes/main"
 
 const config = {
   type: Phaser.AUTO,
@@ -18,7 +17,6 @@ const config = {
       debug: false,
     },
   },
-  scene: [MainScene],
 }
 
 export default config
