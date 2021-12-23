@@ -18,7 +18,6 @@ const config = {
       debug: false,
     },
   },
-  /* scenes for gameplay */
   scene: [MainScene],
 }
 

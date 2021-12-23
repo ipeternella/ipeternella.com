@@ -35,15 +35,15 @@ class PeterFox extends Phaser.Physics.Arcade.Sprite {
     } else {
       let standingAnimation = ""
 
-      if (this.lastAnimationKey == "front-walking") {
+      if (this.lastAnimationKey === "front-walking") {
         standingAnimation = "front-standing"
-      } else if (this.lastAnimationKey == "left-walking") {
+      } else if (this.lastAnimationKey === "left-walking") {
         standingAnimation = "left-standing"
         this.flipX = false
-      } else if (this.lastAnimationKey == "right-walking") {
+      } else if (this.lastAnimationKey === "right-walking") {
         standingAnimation = "left-standing" // but we flip
         this.flipX = true
-      } else if (this.lastAnimationKey == "back-walking") {
+      } else if (this.lastAnimationKey === "back-walking") {
         standingAnimation = "back-standing"
       }
       if (standingAnimation !== "") {
