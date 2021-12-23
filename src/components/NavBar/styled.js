@@ -59,4 +59,7 @@ export const NavOption = styled(Typography).attrs({
     padding: 5px;
     color: ${props => props.theme.palette.text.primary};
   }
+  &&:hover {
+    color: ${props => props.theme.palette.foxColors.faceSecondary};
+  }
 `

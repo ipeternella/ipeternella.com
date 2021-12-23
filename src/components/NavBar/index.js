@@ -1,46 +1,51 @@
 import { Link } from "gatsby"
-import React, { useState } from "react"
+import React from "react"
 import * as S from "./styled"
 
-const getFoxSelectorPosition = path => {
-  if (path === "/") {
-    return 0
-  } else if (path === "/about") {
-    return 1
-  } else {
-    return 2
+export const getFoxSelectorPosition = pathname => {
+  const path_mapping = {
+    "/": 0,
+    "/about": 1,
+    "/game": 2,
   }
+
+  if (pathname in path_mapping) {
+    return path_mapping[pathname]
+  }
+
+  return 0
 }
 
-const NavBarOption = props => {
+export const NavBarOption = props => {
   return (
     <>
       {props.isSelected ? (
-        <S.NavOptionWrapper onMouseOver={() => props.onMouseOver()}>
+        <S.NavOptionWrapper>
           <S.FoxFaceImg></S.FoxFaceImg>
           <Link to={props.to}>
             <S.NavOption>{props.name}</S.NavOption>
           </Link>
         </S.NavOptionWrapper>
       ) : (
-        <S.NavOptionWrapper onMouseOver={() => props.onMouseOver()}>
+        <S.NavOptionWrapper>
           <S.NullImg></S.NullImg>
-          <S.NavOption>{props.name}</S.NavOption>
+          <Link to={props.to}>
+            <S.NavOption>{props.name}</S.NavOption>
+          </Link>
         </S.NavOptionWrapper>
       )}
     </>
   )
 }
 
-const NavBar = ({ location }) => {
-  const [pos, setPos] = useState(getFoxSelectorPosition(location.pathname))
-  const togglePosition = ix => setPos(ix)
+export const NavBar = ({ location }) => {
+  const selectorPos = getFoxSelectorPosition(location.pathname)
 
   return (
     <S.NavBarWrapper>
-      <NavBarOption name="Home" to="/" onMouseOver={() => togglePosition(0)} isSelected={pos === 0} />
-      <NavBarOption name="About me" to="/about" onMouseOver={() => togglePosition(1)} isSelected={pos === 1} />
-      <NavBarOption name="Play" to="/game" onMouseOver={() => togglePosition(2)} isSelected={pos === 2} />
+      <NavBarOption name="Home" to="/" isSelected={selectorPos === 0} />
+      <NavBarOption name="About me" to="/about" isSelected={selectorPos === 1} />
+      <NavBarOption name="Play" to="/game" isSelected={selectorPos === 2} />
     </S.NavBarWrapper>
   )
 }
