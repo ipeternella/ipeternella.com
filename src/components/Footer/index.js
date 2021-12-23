@@ -2,9 +2,11 @@ import React from "react"
 import * as S from "./styled"
 
 const Footer = () => {
+  const today = new Date()
+
   return (
     <S.FooterWrapper>
-      <S.FooterLogo>© 2021 ipeternella</S.FooterLogo>
+      <S.FooterLogo>© {today.getFullYear()} ipeternella</S.FooterLogo>
     </S.FooterWrapper>
   )
 }
