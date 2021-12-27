@@ -1,0 +1,8 @@
+# start by excluding all files and allowing only specific folders
+*
+!content
+!src
+!static
+!gatsby-*.js
+!package.json
+!package-lock.json
