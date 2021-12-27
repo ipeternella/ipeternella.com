@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e927173a-3e24-4e71-8215-25957c4c3a9c/deploy-status)](https://app.netlify.com/sites/ipeternella/deploys)
+
 # 🦊 ipeternella.com 🏗️
 
 A Gatsby and Phaser project design to anyone who would like to know a few bits about me. It features an interactive very short top-down rpg-like game with Peter the fox 🦊!
