@@ -1,3 +1,5 @@
+require("dotenv").config({ path: ".env.development" })
+
 module.exports = {
   transform: {
     "^.+\\.jsx?$": `<rootDir>/jest-preprocess.js`,
@@ -13,5 +15,5 @@ module.exports = {
     __PATH_PREFIX__: ``,
   },
   testURL: `http://localhost`,
-  setupFiles: [`<rootDir>/loadershim.js`],
+  setupFiles: [`<rootDir>/loadershim.js`, `<rootDir>/tests/support/env.js`],
 }
