@@ -1,6 +1,3 @@
-backend:
-  name: git-gateway
-  branch: main
 publish_mode: editorial_workflow
 media_folder: "/static/images/blog"
 public_folder: "/images/blog"
@@ -8,27 +5,32 @@ collections:
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
+    extension: "md"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # blog filenames, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+    path: "{{year}}/{{month}}/{{slug}}" # where the file will be saved on the os filesys
+    preview_path: "blog/{{year}}/{{month}}/{{slug}}" # url path where the content will be found
+    media_folder: "{{media_folder}}" # must be specified or the blog folder will be used for static
+    public_folder: "{{public_folder}}" # same as above
+    fields: # The fields for each document, usually in frontmatter
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
+      - { label: "Cover Image", name: "coverimg", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" } # body: what comes after frontmatter
   - name: "pages"
     label: "Pages"
     files:
       - label: "Home"
         name: "home"
-        file: "content/pages/home.yml"
+        file: "content/pages/home.md"
         fields:
           - { label: "Path", name: "path", widget: "hidden", default: "/" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "About"
         name: "about"
-        file: "content/pages/about.yml"
+        file: "content/pages/about.md"
         fields:
           - { label: "Path", name: "path", widget: "hidden", default: "/about" }
           - { label: "Title", name: "title", widget: "string" }

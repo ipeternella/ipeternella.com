@@ -1,8 +1,9 @@
-export const buildNetlifyCmsConfig = localBackend => {
+export const buildNetlifyCmsConfig = (localBackend, branch) => {
   const cfg = {
     config: {
       backend: {
         name: "git-gateway",
+        branch: branch,
       },
     },
   }
