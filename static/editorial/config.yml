@@ -7,8 +7,8 @@ collections:
     folder: "content/blog"
     extension: "md"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # blog filenames, e.g., YYYY-MM-DD-title.md
-    path: "{{year}}/{{month}}/{{slug}}" # where the file will be saved on the os filesys
+    slug: "{{slug}}" # blog filenames, e.g., YYYY-MM-DD-title.md
+    path: "{{year}}/{{month}}/{{day}}/{{slug}}" # where the file will be saved on the os filesys
     preview_path: "blog/{{year}}/{{month}}/{{slug}}" # url path where the content will be found
     media_folder: "{{media_folder}}" # must be specified or the blog folder will be used for static
     public_folder: "{{public_folder}}" # same as above
@@ -26,6 +26,7 @@ collections:
         file: "content/pages/home.md"
         fields:
           - { label: "Path", name: "path", widget: "hidden", default: "/" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "About"
@@ -33,5 +34,6 @@ collections:
         file: "content/pages/about.md"
         fields:
           - { label: "Path", name: "path", widget: "hidden", default: "/about" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
