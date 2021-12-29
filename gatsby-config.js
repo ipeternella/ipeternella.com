@@ -9,7 +9,7 @@ module.exports = {
     social: {
       github: "https://github.com/ipeternella",
       linkedin: "https://www.linkedin.com/in/igor-grillo-peternella/",
-      twitter: "https://twitter.com/grillo_igor",
+      twitter: "https://twitter.com/igpeternella",
       leetcode: "https://leetcode.com/ipeternella/",
       hackerrank: "https://www.hackerrank.com/ipeternella",
     },
@@ -18,8 +18,22 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        path: `${__dirname}/static/images`,
+        name: "uploads",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: `pages`,
         path: `${__dirname}/content/pages`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/content/blog`,
       },
     },
     {
@@ -30,11 +44,15 @@ module.exports = {
         manualInit: true,
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: ["gatsby-remark-prismjs", "gatsby-remark-copy-linked-files", "gatsby-remark-images"],
+      },
+    },
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp",
-    "gatsby-transformer-remark",
+    "gatsby-transformer-remark", // transformer parsing .md files and its frontmatter with remark
   ],
 }
