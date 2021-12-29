@@ -10,8 +10,9 @@ export const getFoxSelectorPosition = pathname => {
     "/blog": 2,
     "/blog/": 2,
     "/game": 3,
-    "/game/": 3, // TODO: refactor with regexps
-  }
+    "/game/": 3,
+    "unknown": 0,
+  } // TODO: refactor with regexps
 
   if (pathname in path_mapping) {
     return path_mapping[pathname]

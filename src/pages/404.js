@@ -29,7 +29,7 @@ const NoWhereToGoLink = styled(Typography).attrs({
 
 const NotFoundPage = () => {
   return (
-    <Layout pageTitle="Oops! Not found!">
+    <Layout pageTitle="Oops! Not found!" location="unknown">
       <Container>
         <NoWhereToGo>Sorry, it seems that my fox couldn't find the page you're looking for!</NoWhereToGo>
 

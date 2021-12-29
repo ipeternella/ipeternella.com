@@ -3,7 +3,8 @@ import React from "react"
 import Content from "../components/Content"
 import Layout from "../components/Layout"
 
-const IndexPage = ({ data }) => {
+const AboutPage = ({ data }) => {
+  console.log(data)
   const {
     markdownRemark: { frontmatter, html },
   } = data // from page query
@@ -19,7 +20,7 @@ const IndexPage = ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(frontmatter: { path: { eq: "/" } }) {
+    markdownRemark(frontmatter: { path: { eq: "/about" } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
@@ -30,4 +31,6 @@ export const pageQuery = graphql`
   }
 `
 
-export default IndexPage
+console.log(pageQuery)
+
+export default AboutPage
