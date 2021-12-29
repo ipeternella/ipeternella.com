@@ -7,15 +7,17 @@ export const getFoxSelectorPosition = pathname => {
     "/": 0,
     "/about": 1,
     "/about/": 1,
-    "/game": 2,
-    "/game/": 2, // TODO: refactor with regexps
+    "/blog": 2,
+    "/blog/": 2,
+    "/game": 3,
+    "/game/": 3, // TODO: refactor with regexps
   }
 
   if (pathname in path_mapping) {
     return path_mapping[pathname]
   }
 
-  return 0
+  return 2
 }
 
 export const NavBarOption = props => {
@@ -41,13 +43,14 @@ export const NavBarOption = props => {
 }
 
 export const NavBar = ({ location }) => {
-  const selectorPos = getFoxSelectorPosition(location.pathname)
+  const selectorPos = getFoxSelectorPosition(location)
 
   return (
     <S.NavBarWrapper>
       <NavBarOption name="Home" to="/" isSelected={selectorPos === 0} />
       <NavBarOption name="About me" to="/about" isSelected={selectorPos === 1} />
-      <NavBarOption name="Play" to="/game" isSelected={selectorPos === 2} />
+      <NavBarOption name="Blog" to="/blog" isSelected={selectorPos === 2} />
+      <NavBarOption name="Play" to="/game" isSelected={selectorPos === 3} />
     </S.NavBarWrapper>
   )
 }

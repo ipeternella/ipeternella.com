@@ -3,12 +3,13 @@ import React from "react"
 import Content from "../components/Content"
 import Layout from "../components/Layout"
 
-const IndexPage = ({ data, location }) => {
+const IndexPage = ({ data }) => {
   const {
     markdownRemark: { frontmatter, html },
   } = data // from page query
   const title = frontmatter.title
   const content = html
+  const location = frontmatter.path
 
   return (
     <Layout location={location}>
@@ -18,11 +19,13 @@ const IndexPage = ({ data, location }) => {
 }
 
 export const pageQuery = graphql`
-  query ($frontMatterHomePageTitle: String) {
-    markdownRemark(frontmatter: { title: { eq: $frontMatterHomePageTitle } }) {
+  query PageByPath($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
+        date(formatString: "MMMM DD, YYYY")
         title
+        path
       }
     }
   }

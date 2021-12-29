@@ -2,9 +2,9 @@ import React from "react"
 import Game from "../components/Game"
 import Layout from "../components/Layout"
 
-const GamePage = ({ data, location }) => {
+const GamePage = ({ data }) => {
   return (
-    <Layout location={location}>
+    <Layout location="/game">
       <Game />
     </Layout>
   )

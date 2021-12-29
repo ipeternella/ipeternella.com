@@ -20,6 +20,7 @@ const ThemeSwitch = () => {
   )
 }
 
+// non-page components must use static queries to fetch data
 const Header = ({ pageTitle }) => {
   const metadataQry = useStaticQuery(graphql`
     query {
