@@ -1,4 +1,6 @@
 ---
+path: /about
+date: 2021-12-28T19:53:29.022Z
 title: About
 ---
 
@@ -8,10 +10,10 @@ My career in software development started after I finished my undergraduate thes
 
 ### Curious Person
 
-I've always been a self-taught person regarding things that I'm curious about! And that's definitely everything related to the computing world. I'm always looking for new technologies to learn and challenges/problems to solve! Computing is my passion so I always seek to acquire an in-depth knowledge of the systems that I work with specially the backend and infrastructure of such applications!
+I've always been a self-taught person regarding things that I'm curious about! And that's definitely everything related to the computing world. I'm always looking for new technologies to learn and challenges/problems to solve! Computing is my passion so I always seek to acquire an in-depth knowledge of the systems that I work with specially the backend and infrastructure of such applications!!!
 
 ### Open-source projects
 
-I really like open source projects! After work, I usually try to contribute and create such projects. So, please, check out my github! There one can find my open source projects such as games developed with Unity, Django servers, chat solutions, chat bots, and some algorithms using different programming languages!
+I really like open source projects! After work, I usually try to contribute and create such projects. So, please, check out my github! There one can find my open source projects such as games developed with Unity, Django servers, chat solutions, chat bots, and some algorithms using different programming languages
 
 &nbsp;
