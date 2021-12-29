@@ -19,6 +19,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             frontmatter {
               path
               date
+              layout
             }
           }
         }
@@ -32,11 +33,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: blogPostTemplate,
-      context: {},
-    })
+    const isBlogNode = node.frontmatter.layout === "blog"
+
+    if (isBlogNode) {
+      createPage({
+        path: node.frontmatter.path,
+        component: blogPostTemplate,
+        context: {},
+      })
+    }
   })
 }
 

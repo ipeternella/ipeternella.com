@@ -16,6 +16,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: "static/images/fox-favicon.png",
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/static/images`,
