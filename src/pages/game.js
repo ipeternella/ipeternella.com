@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 
 const GamePage = ({ data }) => {
   return (
-    <Layout location="/game">
+    <Layout pageTitle="Game" location="/game">
       <Game />
     </Layout>
   )

@@ -1,6 +1,6 @@
 ---
-path: /about
 date: 2021-12-28T19:53:29.022Z
+path: /about
 title: About
 ---
 

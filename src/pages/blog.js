@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 
 const BlogPage = ({ data }) => {
   return (
-    <Layout location="/blog">
+    <Layout pageTitle="Blog" location="/blog">
       <BlogPosts data={data}></BlogPosts>
     </Layout>
   )

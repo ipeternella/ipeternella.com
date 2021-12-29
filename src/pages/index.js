@@ -8,11 +8,10 @@ const IndexPage = ({ data }) => {
     markdownRemark: { frontmatter, html },
   } = data // from page query
   const title = frontmatter.title
-  const content = html
   const location = frontmatter.path
 
   return (
-    <Layout location={location}>
+    <Layout pageTitle={title} location={location}>
       <Content content={html} />
     </Layout>
   )
