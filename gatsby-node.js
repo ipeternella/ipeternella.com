@@ -35,7 +35,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const isBlogNode = node.frontmatter.layout === "blog"
 
-    if (isBlogNode) {
+    if (isBlogNode && node.frontmatter.path !== undefined) {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,

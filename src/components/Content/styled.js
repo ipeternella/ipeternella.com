@@ -226,7 +226,21 @@ export const ContentWrapper = styled(Box).attrs({
   .gatsby-highlight {
     margin-bottom: var(--spacing-8);
   }
+
+  /* post images */
   img {
-    width: 100%;
+    display: block;
+    margin: auto;
+    max-width: 400px;
+    max-height: 400px;
+    width: 50%;
+  }
+
+  /* prismjs classes */
+  .line-numbers {
+    padding: 10px;
+  }
+  .line-numbers-rows {
+    padding: 10px;
   }
 `

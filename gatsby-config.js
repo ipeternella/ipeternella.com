@@ -51,14 +51,17 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: "gatsby-transformer-remark", // transformer parsing .md files and its frontmatter with remark
       options: {
-        plugins: ["gatsby-remark-prismjs", "gatsby-remark-copy-linked-files", "gatsby-remark-images"],
+        plugins: [
+          { resolve: `gatsby-remark-prismjs`, options: { showLineNumbers: false } },
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-images",
+        ],
       },
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-remark", // transformer parsing .md files and its frontmatter with remark
   ],
 }
