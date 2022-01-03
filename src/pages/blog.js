@@ -11,6 +11,7 @@ const BlogPage = ({ data }) => {
   )
 }
 
+// query for allMarkdownRemark nodes which contains all blog posts as processed .md files!
 export const pageQuery = graphql`
   query BlogPostsQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
@@ -19,8 +20,8 @@ export const pageQuery = graphql`
           excerpt(pruneLength: 250)
           id
           frontmatter {
-            title
             date(formatString: "MMMM DD, YYYY")
+            title
             path
             layout
             coverimg

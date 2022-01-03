@@ -10,7 +10,7 @@ const path = require("path")
  */
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
+  const BlogPostTemplate = path.resolve(`src/templates/blog-post.js`)
   const result = await graphql(`
     {
       allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
@@ -20,6 +20,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               path
               date
               layout
+            }
+            fields {
+              path
             }
           }
         }
@@ -35,10 +38,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const isBlogNode = node.frontmatter.layout === "blog"
 
-    if (isBlogNode && node.frontmatter.path !== undefined) {
+    if (isBlogNode) {
       createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
+        path: node.fields.path, // uses the filePath field set by the onCreateNode() api!
+        component: BlogPostTemplate,
         context: {},
       })
     }
@@ -48,17 +51,25 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 /*
  * onCreateNode is a node API usually used to transform nodes before leaving them ready for the GraphQL queries.
  */
-exports.onCreateNode = ({ node, actions }) => {
-  const { createNode, createNodeField } = actions
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
 
   // https://www.gatsbyjs.com/docs/reference/config-files/actions/#createNodeField
   if (node.internal.type === "MarkdownRemark") {
     let relativeFolder = node.fileAbsolutePath.split("/content/blog")[1]
-    let path = ""
+    let filePath = ""
 
     if (relativeFolder !== undefined && relativeFolder.split(".md")[0] !== undefined) {
-      path = `/blog${relativeFolder.split(".md")[0]}`
-      node.frontmatter.path = path // sets frontmatter path as well!
+      filePath = `/blog${relativeFolder.split(".md")[0]}`
+
+      // [!]: sets frontmatter.path for "MarkdownRemark" and "allMarkdownRemark" graphQL queries!
+      node.frontmatter.path = filePath
+
+      createNodeField({
+        node,
+        name: `path`,
+        value: filePath, // adds filePath to be the dynamic url used by createPages() api
+      })
     }
   }
 }

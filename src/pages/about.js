@@ -4,7 +4,6 @@ import Content from "../components/Content"
 import Layout from "../components/Layout"
 
 const AboutPage = ({ data }) => {
-  console.log(data)
   const {
     markdownRemark: { frontmatter, html },
   } = data // from page query
@@ -30,7 +29,5 @@ export const pageQuery = graphql`
     }
   }
 `
-
-console.log(pageQuery)
 
 export default AboutPage

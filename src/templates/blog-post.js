@@ -4,7 +4,7 @@ import Content from "../components/Content"
 import Layout from "../components/Layout"
 import * as S from "./styled"
 
-const BlogPostTemplate = ({ data }) => {
+const IndividualBlogPostTemplate = ({ data }) => {
   const {
     markdownRemark: { frontmatter, html },
   } = data
@@ -38,4 +38,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default BlogPostTemplate
+export default IndividualBlogPostTemplate
