@@ -14,6 +14,18 @@ export const browserReadEnvAsBoolOrException = envObj => {
 }
 
 /*
+ * Similar function to the above one but does not attempt to evaluate the env var
+ * as a boolean value.
+ */
+export const browserReadEnvOrException = envObj => {
+  if (envObj === undefined) {
+    throw new Error(`Missing required variable: ${envObj}`)
+  }
+
+  return envObj
+}
+
+/*
  * NodeJS env parsing functions.
  */
 export const readEnvOrException = envName => {
