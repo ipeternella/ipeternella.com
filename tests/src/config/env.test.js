@@ -14,7 +14,7 @@ describe("Config-related functions", () => {
 
   it("Should read a defined env variable", async () => {
     // act
-    const env = readEnvOrException("NETLIFY_CMS_LOCAL_BACKEND")
+    const env = readEnvOrException("GATSBY_NETLIFY_CMS_LOCAL_BACKEND")
 
     // assert
     expect(env).toBe("true")
@@ -33,7 +33,7 @@ describe("Config-related functions", () => {
 
   it("Should read a defined bool env variable", async () => {
     // act
-    const env = readEnvAsBoolOrException("NETLIFY_CMS_LOCAL_BACKEND")
+    const env = readEnvAsBoolOrException("GATSBY_NETLIFY_CMS_LOCAL_BACKEND")
 
     // assert
     expect(env).toBe(true)

@@ -1,7 +1,7 @@
 /*
- * Browser env parsing functions (must be prefixed with GATSBY_).
- * Notice that webpack does not allow destructuring, so process.env[NAME]
- * (bracket notation) doesn't work so we must pass process.env.NAME and see if the env exists.
+ * Browser env parsing functions (must be prefixed with GATSBY_). Notice that webpack does not
+ * allow destructuring, so process.env[NAME] (bracket notation) doesn't work so we must pass
+ * process.env.NAME and see if the env exists.
  */
 export const browserReadEnvAsBoolOrException = envObj => {
   const truthies = ["true", "1", "t", "y"]

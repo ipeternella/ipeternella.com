@@ -31,7 +31,7 @@ describe("Navbar component test suite", () => {
     const pos = getFoxSelectorPosition(pathname)
 
     // assert
-    expect(pos).toBe(2)
+    expect(pos).toBe(3)
   })
 
   it("Should return the default fox selector position", () => {

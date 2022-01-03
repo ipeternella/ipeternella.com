@@ -1,15 +1,21 @@
-export const buildNetlifyCmsConfig = (localBackend, branch) => {
+export const buildNetlifyCmsConfig = (localBackend, repo = "", branch = "") => {
   const cfg = {
     config: {
-      backend: {
-        name: "git-gateway",
-        branch: branch,
-      },
+      backend: {},
+      local_backend: localBackend,
     },
   }
 
   if (localBackend) {
-    cfg["config"]["local_backend"] = true
+    cfg["config"]["backend"] = {
+      name: "git-gateway",
+    }
+  } else {
+    cfg["config"]["backend"] = {
+      name: "github",
+      repo: repo,
+      branch: branch,
+    }
   }
 
   return cfg
