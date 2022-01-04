@@ -27,12 +27,6 @@ export const PeterFox = styled.img.attrs({
   image-rendering: pixelated;
 `
 
-export const NullFox = styled.div`
-  width: 100px;
-  padding-top: 20px;
-  background: transparent;
-`
-
 export const LogoAndSocialIconsWrapper = styled(Box)`
   display: flex;
   flex-wrap: wrap;
