@@ -21,7 +21,7 @@ export const ContentWrapper = styled(Box).attrs({
   --color-primary: ${props => props.theme.palette.primary.light};
   --color-text: ${props => props.theme.palette.text.primary};
   --color-text-light: ${props => props.theme.palette.text.primary};
-  --color-heading: ${props => props.theme.palette.foxColors.hood};
+  --color-heading: ${props => props.theme.palette.foxColors.facePrimary};
   --color-accent: ${props => props.theme.palette.divider};
 
   /* font weights */
@@ -207,6 +207,8 @@ export const ContentWrapper = styled(Box).attrs({
   }
   a {
     color: var(--color-primary);
+    text-decoration: underline;
+    font-size: var(--fontSize-2);
   }
   a:hover,
   a:focus {
@@ -234,6 +236,7 @@ export const ContentWrapper = styled(Box).attrs({
     max-width: 400px;
     max-height: 400px;
     width: 50%;
+    image-rendering: pixelated;
   }
 
   /* prismjs classes */

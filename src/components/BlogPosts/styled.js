@@ -9,7 +9,7 @@ export const BlogPostsWrapper = styled(Container).attrs({})`
 
 export const PostCard = styled(Card).attrs()`
   border: 1px solid ${props => props.theme.palette.foxColors.faceSecondary};
-  background: ${props => props.theme.palette.background.paper};
+  background: ${props => props.theme.palette.background.primary};
   margin: 1em;
   width: 300px;
 `
@@ -43,9 +43,11 @@ export const PostDescription = styled(Typography).attrs({
 
 export const PostCardActionArea = styled(CardActionArea).attrs({})`
   height: 100%;
-  &:hover {
-    background: ${props => (props.theme.palette.mode === "dark" ? "grey" : "white")};
+  &&:hover {
+    background: ${props => (props.theme.palette.mode === "dark" ? "grey" : "#fbf2ec")};
   }
 `
 export const PostCardContent = styled(CardContent).attrs({})``
-export const PostCardMedia = styled(CardMedia).attrs({})``
+export const PostCardMedia = styled(CardMedia).attrs({})`
+  image-rendering: pixelated;
+`

@@ -1,28 +1,21 @@
-import { amber, deepOrange, grey } from "@material-ui/core/colors"
+import { grey } from "@material-ui/core/colors"
 
 export const getPaletteFromMode = mode => {
-  let lightMode = {
-    primary: amber,
-    divider: amber[200],
+  const lightMode = {
     background: {
-      default: grey[300],
+      primary: grey[50],
     },
     text: {
       primary: grey[900],
-      secondary: grey[800],
     },
   }
 
-  let darkMode = {
-    primary: deepOrange,
-    divider: deepOrange[700],
+  const darkMode = {
     background: {
-      default: grey[900],
-      paper: grey[900],
+      primary: grey[900],
     },
     text: {
       primary: "#fff",
-      secondary: grey[500],
     },
   }
 
@@ -30,7 +23,7 @@ export const getPaletteFromMode = mode => {
 }
 
 export const buildThemeConfig = mode => {
-  let modePalette = getPaletteFromMode(mode)
+  const modePalette = getPaletteFromMode(mode)
 
   return {
     palette: {
