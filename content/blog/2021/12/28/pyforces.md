@@ -16,7 +16,6 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 ```python{numberLines: true}
 import os
 
-print(os.getcwd())
 print("hello world!")
 ```
 
