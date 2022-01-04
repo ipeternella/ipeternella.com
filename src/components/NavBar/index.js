@@ -26,7 +26,7 @@ export const NavBarOption = props => {
     <>
       {props.isSelected ? (
         <S.NavOptionWrapper>
-          <S.FoxFaceImg></S.FoxFaceImg>
+          <S.PeterFoxSelector></S.PeterFoxSelector>
           <Link to={props.to}>
             <S.NavOption>{props.name}</S.NavOption>
           </Link>

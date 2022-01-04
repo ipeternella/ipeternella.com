@@ -41,6 +41,7 @@ const Header = ({ pageTitle }) => {
 
   return (
     <S.HeaderWrapper>
+      <S.PeterFox></S.PeterFox>
       <S.LogoAndSocialIconsWrapper>
         <S.Logo>ipeternella</S.Logo>
         <S.SocialMediaLinkWrapper href={metadataQry.site.siteMetadata.social.linkedin}>
