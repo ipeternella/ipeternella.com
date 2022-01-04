@@ -1,5 +1,7 @@
 ---
-title: "Home"
+path: /
+date: 2021-12-28T19:53:14.239Z
+title: Home
 ---
 
 # Welcome! 👋
@@ -15,9 +17,15 @@ there aren't many, but as time passes, more sections will be added! Keep looking
 
 In this section you can find a few bits and bytes about me such as who am I, some topics I really enjoy to study, how I became a software engineer and more curiosities! I guess this what you came looking for, right 🤣?
 
-### Play 🦊
+### Blog 📖
+
+This is a place where I try to share some technical knowledge regarding many computing areas in order to hopefully help others! Please, have a look at the posts and see if something's new to you! Also, if you have find any mistakes there, please go to my Github and open a pull-request!
+
+### Play 🦊 🚧
 
 No time for reading? Not a problem! How about playing a quick top-down rpg-like game with Peter the fox to get to know me a little better?
+
+The game isn't complete yet, but Peter is already there waiting for you!!
 
 ### Thanks 🙏
 

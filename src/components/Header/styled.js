@@ -3,6 +3,7 @@ import { Github, LinkedinSquare, Twitter } from "@styled-icons/boxicons-logos"
 import { Hackerrank } from "@styled-icons/fa-brands"
 import { Leetcode } from "@styled-icons/simple-icons/"
 import styled from "styled-components"
+import PeterFoxGif from "../../../static/gif/peter-standing-right.gif"
 
 const logoIconsHeight = 40
 
@@ -12,13 +13,26 @@ export const HeaderContainer = styled(Container)`
 
 export const HeaderWrapper = styled(Box)`
   display: flex;
+  justify-content: space-between;
+`
+
+export const PeterFox = styled.img.attrs({
+  src: PeterFoxGif,
+})`
+  align-self: center;
+  width: 100px;
+  padding-top: 20px;
+
+  /* pixel art */
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 `
 
 export const LogoAndSocialIconsWrapper = styled(Box)`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
 `
 
 export const ThemeSwitchWrapper = styled(Box)`

@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from "@material-ui/core"
 import styled from "styled-components"
-import FoxSelectorImg from "../../../static/images/fox-selector.png"
+import PeterSelectorImg from "../../../static/images/peter-selector.png"
 
 export const NavBarWrapper = styled(Container).attrs({
   maxWidth: "lg",
@@ -24,8 +24,8 @@ export const NavOptionWrapper = styled(Box)`
   display: flex;
 `
 
-export const FoxFaceImg = styled.img.attrs({
-  src: FoxSelectorImg,
+export const PeterFoxSelector = styled.img.attrs({
+  src: PeterSelectorImg,
 })`
   width: 40px;
   margin: 0px;

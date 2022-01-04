@@ -1,51 +1,45 @@
+import { Container, Typography } from "@material-ui/core"
 import { Link } from "gatsby"
-import * as React from "react"
+import React from "react"
+import styled from "styled-components"
+import Layout from "../components/Layout"
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+const NoWhereToGo = styled(Typography).attrs({
+  variant: "h3",
+  align: "center",
+})`
+  font-family: "Fjalla One";
+  margin: 25vh 0;
+  color: ${props => props.theme.palette.text.primary};
+`
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+const NoWhereToGoLink = styled(Typography).attrs({
+  variant: "h5",
+  align: "center",
+})`
+  && {
+    font-family: "Fjalla One";
+    margin: 1em;
+    color: ${props => props.theme.palette.text.primary};
+  }
+  &&:hover {
+    color: ${props => props.theme.palette.foxColors.faceSecondary};
+  }
+`
 
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout pageTitle="Oops! Not found!" location="unknown">
+      <Container>
+        <NoWhereToGo>Sorry, it seems that my fox couldn't find the page you're looking for!</NoWhereToGo>
+
+        <Link to="/">
+          <NoWhereToGoLink>
+            {">>"} Back Home {"<<"}
+          </NoWhereToGoLink>
+        </Link>
+      </Container>
+    </Layout>
   )
 }
 

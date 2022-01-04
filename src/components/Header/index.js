@@ -1,4 +1,4 @@
-import { FormControlLabel, FormGroup } from "@material-ui/core"
+import { FormControlLabel, FormGroup, useMediaQuery } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import React, { useContext } from "react"
 import { ColorThemeContext } from "../../contexts"
@@ -20,7 +20,9 @@ const ThemeSwitch = () => {
   )
 }
 
+// non-page components must use static queries to fetch data
 const Header = ({ pageTitle }) => {
+  const isDesktop = useMediaQuery("(min-width:720px)")
   const metadataQry = useStaticQuery(graphql`
     query {
       site {
@@ -40,6 +42,7 @@ const Header = ({ pageTitle }) => {
 
   return (
     <S.HeaderWrapper>
+      {isDesktop ? <S.PeterFox /> : null}
       <S.LogoAndSocialIconsWrapper>
         <S.Logo>ipeternella</S.Logo>
         <S.SocialMediaLinkWrapper href={metadataQry.site.siteMetadata.social.linkedin}>
@@ -59,7 +62,7 @@ const Header = ({ pageTitle }) => {
         </S.SocialMediaLinkWrapper>
       </S.LogoAndSocialIconsWrapper>
       <S.ThemeSwitchWrapper>
-        <ThemeSwitch></ThemeSwitch>
+        <ThemeSwitch />
       </S.ThemeSwitchWrapper>
     </S.HeaderWrapper>
   )
