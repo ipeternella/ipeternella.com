@@ -24,9 +24,13 @@ export const PeterFox = styled.img.attrs({
   padding-top: 20px;
 
   /* pixel art */
-  image-rendering: auto;
-  image-rendering: crisp-edges;
   image-rendering: pixelated;
+`
+
+export const NullFox = styled.div`
+  width: 100px;
+  padding-top: 20px;
+  background: transparent;
 `
 
 export const LogoAndSocialIconsWrapper = styled(Box)`

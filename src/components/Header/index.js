@@ -1,6 +1,6 @@
 import { FormControlLabel, FormGroup, useMediaQuery } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
-import React, { useContext } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { ColorThemeContext } from "../../contexts"
 import * as S from "./styled"
 
@@ -22,7 +22,16 @@ const ThemeSwitch = () => {
 
 // non-page components must use static queries to fetch data
 const Header = ({ pageTitle }) => {
-  const isDesktop = useMediaQuery("(min-width:720px)")
+  const isDesktopQueryResult = useMediaQuery("(min-width:720px)")
+  const [isDesktop, setIsDesktop] = useState(true)
+
+  // [!]: we cannot use 'isDesktopQueryResult' alone or the fox will keep flickering due
+  // to unnecessary renders, so the 'useEffect()' hook is used in order to only change the
+  // 'isDesktop' variable when the component has been mounted and the query result changes.
+  useEffect(() => {
+    setIsDesktop(isDesktopQueryResult)
+  }, [isDesktopQueryResult])
+
   const metadataQry = useStaticQuery(graphql`
     query {
       site {
@@ -42,7 +51,7 @@ const Header = ({ pageTitle }) => {
 
   return (
     <S.HeaderWrapper>
-      {isDesktop ? <S.PeterFox /> : null}
+      {isDesktop ? <S.PeterFox /> : <S.NullFox />}
       <S.LogoAndSocialIconsWrapper>
         <S.Logo>ipeternella</S.Logo>
         <S.SocialMediaLinkWrapper href={metadataQry.site.siteMetadata.social.linkedin}>
