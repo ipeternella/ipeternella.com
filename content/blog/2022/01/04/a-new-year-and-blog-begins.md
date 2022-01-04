@@ -1,10 +1,10 @@
 ---
 layout: blog
-title: A New Year And Blog Begins
+title: New Year, New Blog!
 date: 2022-01-04T22:01:55.088Z
 coverimg: /images/blog/peter-waving.png
 ---
-# 🎉 A New Year and Blog Begins 🍾
+# 🎉 New Year, New Blog! 🍾
 
 Happy new year to everyone 🎉!!
 
