@@ -21,7 +21,6 @@ export const PeterFox = styled.img.attrs({
 })`
   align-self: center;
   width: 100px;
-  margin: 0 2em;
   padding-top: 20px;
 
   /* pixel art */
@@ -34,7 +33,6 @@ export const LogoAndSocialIconsWrapper = styled(Box)`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 0 0 -2em;
 `
 
 export const ThemeSwitchWrapper = styled(Box)`

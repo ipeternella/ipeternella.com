@@ -49,7 +49,7 @@ export const NavBar = ({ location }) => {
   return (
     <S.NavBarWrapper>
       <NavBarOption name="Home" to="/" isSelected={selectorPos === 0} />
-      <NavBarOption name="About me" to="/about" isSelected={selectorPos === 1} />
+      <NavBarOption name="About" to="/about" isSelected={selectorPos === 1} />
       <NavBarOption name="Blog" to="/blog" isSelected={selectorPos === 2} />
       <NavBarOption name="Play" to="/game" isSelected={selectorPos === 3} />
     </S.NavBarWrapper>
