@@ -8,7 +8,7 @@ coverimg: /images/blog/peter-waving.png
 
 Happy new year to everyone 🎉!!
 
-It's always amazing to learn new technologies and face new challenges, specially at the beginning of a new year! Such challenges is exactly what this new website has brought me. It was fun to learn everything that was needed to finally ship this website/blog to production! Even though there are still many things that still need to be improved here, it's always important to celebrate small steps, right? So, here's a post to celebrate that this new blog is up and running 🎉!
+It's always amazing to learn new technologies and face new challenges, specially at the beginning of a new year! Such challenges is exactly what this new website has brought me. It was fun to learn everything that was needed to finally ship this website/blog to production! Even though there are many things that still need to be improved here, it's always important to celebrate small steps, right? So, here's a post to celebrate that this new blog is up and running 🎉!
 
 ## My first old website: "My Bits" project
 
@@ -25,7 +25,7 @@ Despite being a simple website, this personal project required me to learn many 
 
 The project also featured a small chatbot which could be used by users to ask questions about me! A Django backend was created to store some possible questions and its answers on a MySQL database. Thanks to Docker and Docker Compose, it was very easy to start a local version of the production environment as Docker quickly booted up the Django project, the MySQL database and an NGINX container! I remember how amazed I was by Docker technologies and how easy it was to have a database running on localhost so that I could quickly write my tests using it! Even today I'm still amazed by Docker containers as it's a technology that really changed the computing universe.
 
-Speaking of containers and infrastructure, this old version of "My Bits" project was hosted on a VPS ([Virtual Private Server](https://en.wikipedia.org/wiki/Virtual_private_server)) offered by [VPS Dime](https://vpsdime.com/)! It wasn't easy to setup a Daphne ASGI server with NGINX on a bare virtual machine to properly upgrade the HTTP protocol to web sockets! But... after reading a lot of documentation, it worked. Another hard part was purchasing a domain, configuring DNS servers and setting up the HTTPS certificates! For a junior engineer, it was a bit overwhelming, but I knew that all the coding, documentation reading and infrastructure knowledge would be important to me in the future, and that's exactly what kept me going to finish that project. The following picture (quality's not that great) shows the chatbot screen of this old project version:
+Speaking of containers and infrastructure, this old version of "My Bits" project was hosted on a VPS ([Virtual Private Server](https://en.wikipedia.org/wiki/Virtual_private_server)) offered by [VPS Dime](https://vpsdime.com/)! It wasn't easy to setup a Daphne ASGI server with NGINX on a bare virtual machine to properly upgrade the HTTP protocol to web sockets! But... after reading a lot of documentation, it worked. Another hard part was purchasing a domain, configuring DNS servers and setting up the HTTPS certificates! For a junior software engineer, it was a bit overwhelming, but I knew that all the coding, documentation reading and infrastructure knowledge would be important to me in the future, and that's exactly what kept me going to finish that project. The following picture (quality's not that great) shows the chatbot screen of this old project version:
 
 ![Old Personal Website MyBits](/images/blog/mybits_old.png "Old Personal Website My Bits")
 
@@ -39,13 +39,13 @@ I'm a backend developer who really likes to study a lot about infrastructure (ma
 * [Google Cloud Platform](https://cloud.google.com/)
 * [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs)
 
-This project was a little bit more complex in terms of the backend as it was hosted on a GKE cluster which was completely configured with Terraform. The CI/CD pipelines were created with [Github Actions](https://docs.github.com/en/actions) to build and upload Docker images to a Google Container Registry in order to finally deploy such images to the GKE container! However, the frontend of this project was just based on Django Templates, so no modern frontend framework was used. This second version is also on Github, but it's a private project! I'll open-source it later!
+This project was a little bit more complex in terms of the backend as it was hosted on a GKE cluster which was completely configured with Terraform. The CI/CD pipelines were created with [Github Actions](https://docs.github.com/en/actions) to build and upload Docker images to a Google Container Registry in order to finally deploy such images to the GKE cluster! However, the frontend of this project used only Django Templates, so no modern frontend framework was used. This second version is also on Github, but it's a private project! I'll open-source it later!
 
 ## The most recent version of "My Bits" project
 
-Eventually I decided it was time to challenge myself again: it was time to move out of my "comfort zone" (backend development and infra/devops) and go into a "growth zone" where the technologies and tools would not be familiar at all to me: it was time for some frontend development! As a consequence, I decided to rewrite my personal website once again but with more modern frontend frameworks 💪.
+Eventually I decided that it was time to challenge myself again: it was time to move out of my "comfort zone" (backend development and infra/devops) and go into a "growth zone" where the technologies and tools would not be familiar at all to me: it was time for some frontend development! As a consequence, I decided to rewrite my personal website once again but with more modern frontend frameworks 💪.
 
-One day I was talking to my old friend Antunes and he told me about his experience with Gatsby and recommended it to me. We also talked about some frontend ideas and concepts such as "css-in-JS" tools, Material UI, and many others! After this conversation, I defined the tech stack of this current version of this website as follows:
+One day I was talking to my old friend Antunes and he told me about his experience with Gatsby and recommended it to me. We also talked about some frontend ideas and concepts such as "CSS-in-JS" tools, Material UI, and many others! After this conversation, I defined the tech stack of this current version of this website as follows:
 
 * [Gatsby](https://www.gatsbyjs.com/)
 * [Phaser](https://phaser.io/)
@@ -61,7 +61,7 @@ I'm so thankful that Antunes presented me such technologies! It was super fun to
 
 Challenging myself with different technologies in personal projects required me to learn many different and fun things. I encourage every developer out there to test new technologies in personal projects, or to create some "playground projects" to test different tools! It's amazing how much one can learn from these projects 📚 🚀!
 
-This is it for this first post! I will create other posts as I study other technologies and tools or if I discover anything that can be useful to others.
+This is it for this first post! I will create other posts as I study more technologies and tools or if I discover anything that can be useful to others.
 
 ```python{numberLines:true}
 from ipeternella import PeterFox
