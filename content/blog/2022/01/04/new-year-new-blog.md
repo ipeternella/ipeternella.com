@@ -8,7 +8,7 @@ coverimg: /images/blog/peter-waving.png
 
 Happy new year to everyone 🎉!!
 
-It's always amazing to learn new technologies and face new challenges, specially at the beginning of a new year! Such challenges is exactly what this new website has brought me. It was fun to learn everything that was needed to finally ship this website/blog to production! Even though there are still many things that still need to be improved around here, it's always important to celebrate small steps, right? So, this post is a way to celebrate that this new blog is up and running 🎉!
+It's always amazing to learn new technologies and face new challenges, specially at the beginning of a new year! Such challenges is exactly what this new website has brought me. It was fun to learn everything that was needed to finally ship this website/blog to production! Even though there are still many things that still need to be improved here, it's always important to celebrate small steps, right? So, here's a post to celebrate that this new blog is up and running 🎉!
 
 ## My first old website: "My Bits" project
 
@@ -41,7 +41,7 @@ I'm a backend developer who really likes to study a lot about infrastructure (ma
 
 This project was a little bit more complex in terms of the backend as it was hosted on a GKE cluster which was completely configured with Terraform. The CI/CD pipelines were created with [Github Actions](https://docs.github.com/en/actions) to build and upload Docker images to a Google Container Registry in order to finally deploy such images to the GKE container! However, the frontend of this project was just based on Django Templates, so no modern frontend framework was used. This second version is also on Github, but it's a private project! I'll open-source it later!
 
-## The most recent version of "My Bits"
+## The most recent version of "My Bits" project
 
 Eventually I decided it was time to challenge myself again: it was time to move out of my "comfort zone" (backend development and infra/devops) and go into a "growth zone" where the technologies and tools would not be familiar at all to me: it was time for some frontend development! As a consequence, I decided to rewrite my personal website once again but with more modern frontend frameworks 💪.
 
@@ -55,13 +55,13 @@ One day I was talking to my old friend Antunes and he told me about his experien
 * [Styled Components](https://styled-components.com/)
 * [Jest](https://jestjs.io/)
 
-I'm so thankful that Antunes presented me such technologies! It was super fun to learn Gatsby (which naturally required me to learn more about React)! I also ended up adding Phaser to create a very short RPG-like game as I have always wanted to develop a short game from scratch. Moreover, I added Netlify CMS to help me manage the contents of this blog. Netlify technologies are super easy to use and I quickly could deploy this website, configure my domain (with a redirect from the apex domain to the www subdomain) and set up the HTTPS certificate. It was definitely much easier than setting up a bare VPS machine from scratch as I did in the first version of my website. The computing world evolves so quickly!
+I'm so thankful that Antunes presented me such technologies! It was super fun to learn Gatsby (which naturally required me to learn more about React)! I also ended up adding Phaser to create a very short RPG-like game as I have always wanted to develop a short game from scratch. Moreover, I added Netlify CMS to help me manage the contents of this blog. Netlify technologies are super easy to use and I could quickly deploy this website, configure my domain (with a redirect from the apex domain to the www subdomain) and set up the HTTPS certificate. It was definitely much easier than setting up a bare VPS machine from scratch as I did in the first version of my website. The computing world evolves so quickly!
 
 ## That's all for now, folks!
 
 Challenging myself with different technologies in personal projects required me to learn many different and fun things. I encourage every developer out there to test new technologies in personal projects, or to create some "playground projects" to test different tools! It's amazing how much one can learn from these projects 📚 🚀!
 
-This is it for this first post! I will create other posts as I study other technologies and tools or if I discover anything that can be useful to other people.
+This is it for this first post! I will create other posts as I study other technologies and tools or if I discover anything that can be useful to others.
 
 ```python{numberLines:true}
 from ipeternella import PeterFox
